@@ -1,0 +1,17 @@
+.kartlar {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px; 
+  }
+.kart {
+    width: 200px;
+  }
+#YUKLEME {
+    margin-left: -79px;
+    margin-bottom:-79px;
+    text-align: center;
+    text-transform: uppercase;
+    color: blue;
+}

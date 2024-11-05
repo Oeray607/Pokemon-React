@@ -1,0 +1,11 @@
+#audio {
+    margin-top: -5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: '#1677ff',
+}
+#search {
+    width: 800px;   
+}

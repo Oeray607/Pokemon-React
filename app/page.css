@@ -1,0 +1,39 @@
+/* #layo{
+  background-image: url('https://images8.alphacoders.com/124/1243956.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}  */
+.kartlar {
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px; /* Kartlar arasında boşluk bırakır */
+  }
+.kart {
+    width: 200px; /* Kart genişliği */
+  }
+
+/* body {
+  background-image: url(https://images8.alphacoders.com/124/1243956.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-size: cover;
+} */
+/* #tablo {
+  background-image: url(https://images8.alphacoders.com/124/1243956.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-size: cover;
+  padding: 0 48px
+  
+} */
