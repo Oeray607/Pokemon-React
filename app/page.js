@@ -2,7 +2,6 @@
 import React from 'react';
 import { DownOutlined, LaptopOutlined, MenuUnfoldOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme, } from 'antd';
-import SayfaAlt from './sayfaalt';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -10,7 +9,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
 import './page.css';
-// import Page2 from './page2';
 import Page10 from './TypeMetal';
 import CardContent from '@mui/material/CardContent';
 import { Avatar } from '@mui/material';
@@ -25,7 +23,7 @@ import TypeDarkness from './TypeDarkness';
 import TypeColorless from './TypeColorless';
 import TypePsychic from './TypePsychic';
 
-const avatarUrls = {
+const logo = {
   Fire: 'https://avatarfiles.alphacoders.com/374/thumb-350-374850.webp',
   Colorless: 'https://occ-0-8407-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABf_vkYSzY2EsbRFAOJOS3_ZdreU4YoqzdzVZf-f1CEP9ndmI3705aHteXy3ZD7tLH4YbavoJT3lPK9luZDLgQxhQOBw1tLuBzxFG.jpg?r=b99',
   Dragon: 'https://img.freepik.com/premium-photo/pokemon-3d-art-avatar-charizard-dragon_956173-35.jpg',
@@ -46,7 +44,7 @@ const items2 = cardTypes.map((type, index) => {
   const key = String(index + 1);
   return {
     key: key,
-    icon: <Avatar src={avatarUrls[type]} />,
+    icon: <Avatar src={logo[type]} />,
     label: `Tür: ${type}`,
   };
 });
@@ -112,7 +110,7 @@ const App = () => {
         <Layout style={{ padding: '24px 0', background: colorBgContainer, borderRadius: borderRadiusLG }}>
           <Sider style={{ background: colorBgContainer, }} width={200}>
             <Menu
-              mode="inline" //ilk arayüz
+              mode="inline" 
               defaultSelectedKeys={[0]}
               defaultOpenKeys={[0]}
               style={{ height: '100%' }}
@@ -121,7 +119,7 @@ const App = () => {
             />
           </Sider>
           <Content style={{ padding: '0 24px', minHeight: 280 }}>
-            {renderContent()} {/*render kısmı*/}
+            {renderContent()} 
           </Content>
         </Layout>
       </Content>
@@ -134,7 +132,7 @@ const App = () => {
       //   backgroundRepeat: 'no-repeat',
       // }}
       >
-        <SayfaAlt />
+        {/* <SayfaAlt /> */}
       </Footer>
     </Layout>
   );

@@ -23,19 +23,18 @@ const TypeWater = () => {
       .then((response) => response.json())
       .then((data) => {
         const uniqueWaterPokemons = data.data.reduce((acc, pokemon) => {
-          const isWaterType = pokemon.types && pokemon.types.includes('Water'); // TUR KONTROLU
+          const isWaterType = pokemon.types && pokemon.types.includes('Water');
           if (isWaterType && !acc.some((p) => p.name === pokemon.name)) {
-            acc.push(pokemon); // AYNI ISIMLI TEK BIR POKE
+            acc.push(pokemon);
           }
           return acc;
         }, []);
-        setPokemonList(uniqueWaterPokemons); // FILTER POKE
-        setFilteredPokemonList(uniqueWaterPokemons); // Başlangıçta tüm kartlar gösteriliyor
+        setPokemonList(uniqueWaterPokemons);
+        setFilteredPokemonList(uniqueWaterPokemons);
       })
       .catch((error) => console.error('HATA:', error));
   }, []);
   const handleSearch = (value) => {
-    // Arama sonuçlarını filtrele ve seçenekleri güncelle
     const filtered = pokemonList.filter((pokemon) =>
       pokemon.name.toLowerCase().includes(value.toLowerCase())
     );
@@ -94,12 +93,12 @@ const TypeWater = () => {
       <Space id="audio" direction="vertical" style={{ width: '100%', textAlign: 'center', marginBottom: '20px' }}>
         <AutoComplete
           options={filteredOptions}
-          onSearch={handleSearch} // Kullanıcı aradıkça filtreleme yapar
+          onSearch={handleSearch}
           style={{ width: '800px' }}
         >
           <Search
             size="large"
-            onChange={(e) => handleSearch(e.target.value)} // Arama kutusundaki her değişiklikte güncelleme yapar
+            onChange={(e) => handleSearch(e.target.value)}
             placeholder="Search Pokémon"
             allowClear
           />
@@ -142,7 +141,7 @@ const TypeWater = () => {
               </CardContent>
               <CardActions>
                 <Button size="small" onClick={() => handleExpandClick(pokemon.id)}>
-                  LEARN MORE
+                  EK BILGI
                 </Button>
                 <IconButton
                   expand={expandedList[pokemon.id] || false}

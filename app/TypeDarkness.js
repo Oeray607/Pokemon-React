@@ -147,7 +147,7 @@ const TypeDarkness = () => {
               </CardContent>
               <CardActions>
                 <Button size="small" onClick={() => handleExpandClick(pokemon.id)}>
-                  LEARN MORE
+                  EK BILGI
                 </Button>
                 <IconButton
                   expand={expandedList[pokemon.id] || false}

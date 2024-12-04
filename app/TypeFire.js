@@ -30,13 +30,12 @@ const TypeFire = () => {
           return acc;
         }, []);
         setPokemonList(uniqueFirePokemons);
-        setFilteredPokemonList(uniqueFirePokemons); // Başlangıçta tüm kartlar gösteriliyor
+        setFilteredPokemonList(uniqueFirePokemons);
       })
       .catch((error) => console.error('HATA:', error));
   }, []);
 
   const handleSearch = (value) => {
-    // Arama sonuçlarını filtrele ve seçenekleri güncelle
     const filtered = pokemonList.filter((pokemon) =>
       pokemon.name.toLowerCase().includes(value.toLowerCase())
     );
@@ -99,12 +98,12 @@ const TypeFire = () => {
       <Space id="audio" direction="vertical" style={{ width: '100%', textAlign: 'center', marginBottom: '20px' }}>
         <AutoComplete
           options={filteredOptions}
-          onSearch={handleSearch} // Kullanıcı aradıkça filtreleme yapar
+          onSearch={handleSearch}
           style={{ width: '800px' }}
         >
           <Search
             size="large"
-            onChange={(e) => handleSearch(e.target.value)} // Arama kutusundaki her değişiklikte güncelleme yapar
+            onChange={(e) => handleSearch(e.target.value)}
             placeholder="Search Pokémon"
             allowClear
           />
@@ -147,7 +146,7 @@ const TypeFire = () => {
               </CardContent>
               <CardActions>
                 <Button size="small" onClick={() => handleExpandClick(pokemon.id)}>
-                  LEARN MORE
+                  EK BILGI
                 </Button>
                 <IconButton
                   expand={expandedList[pokemon.id] || false}
